@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+/* ============================================================
+   THEME — edit these CSS variables to change colors globally
+   ============================================================ */
+@theme {
+  --color-charcoal: #0a0a0b;
+  --color-charcoal-light: #141416;
+  --color-offwhite: #f0ede8;
+  --color-muted: #8a8780;
+  --color-accent: #6366f1;
+  --color-accent-soft: #818cf8;
+  --color-line: rgba(240, 237, 232, 0.12);
+
+  --font-display: "Syne", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+}
+
+/* ============================================================
+   BASE STYLES
+   ============================================================ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-charcoal);
+  color: var(--color-offwhite);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-charcoal);
+}
+
+/* Thin editorial divider */
+.divider {
+  height: 1px;
+  background: var(--color-line);
+  width: 100%;
+}
+
+/* Small uppercase label style used across sections */
+.label {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+/* Display headings */
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Custom cursor — desktop only (pointer: fine) */
+@media (pointer: fine) {
+  body.custom-cursor-active,
+  body.custom-cursor-active * {
+    cursor: none !important;
+  }
+}
+
+/* Marquee animation for Beyond Tech section */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee 28s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Focus styles for accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .marquee-track {
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
