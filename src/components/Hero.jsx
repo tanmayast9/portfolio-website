@@ -14,7 +14,7 @@ export default function Hero() {
         <HeroVisual />
       </div>
 
-      <div className="relative mx-auto grid w-full max-w-7xl items-center gap-10 px-6 md:grid-cols-2 md:gap-12 md:px-10 lg:gap-20">
+      <div className="relative mx-auto flex w-full max-w-7xl items-center px-6 md:px-10">
         {/* Text */}
         <div className="flex flex-col justify-center">
           <Reveal>
@@ -62,23 +62,6 @@ export default function Hero() {
           </Reveal>
         </div>
 
-        {/* Portrait beside text — no separate box */}
-        <motion.div
-          className="relative flex items-end justify-center md:justify-end"
-          initial={{ opacity: 0, x: 24 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <div
-            className="absolute bottom-[5%] h-[60%] w-[70%] rounded-full bg-accent/10 blur-3xl"
-            aria-hidden="true"
-          />
-          <img
-            src={personal.heroImage}
-            alt={`Portrait of ${personal.name}`}
-            className="relative z-10 max-h-[min(70vh,520px)] w-auto object-contain object-bottom drop-shadow-[0_20px_40px_rgba(0,0,0,0.45)]"
-          />
-        </motion.div>
       </div>
 
       {/* Scroll indicator */}

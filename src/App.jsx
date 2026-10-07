@@ -5,7 +5,6 @@ import About from "./components/About";
 import ExperienceSection from "./components/Experience";
 import Work from "./components/Work";
 import Skills from "./components/Skills";
-import BeyondTech from "./components/BeyondTech";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -25,8 +24,6 @@ export default function App() {
         <Work />
         <div className="divider mx-auto max-w-7xl px-6 md:px-10" />
         <Skills />
-        <div className="divider mx-auto max-w-7xl px-6 md:px-10" />
-        <BeyondTech />
         <div className="divider mx-auto max-w-7xl px-6 md:px-10" />
         <Contact />
       </main>

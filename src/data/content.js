@@ -14,8 +14,6 @@ export const personal = {
   email: "tanmayatilavalli@gmail.com",
   linkedin: "https://www.linkedin.com/in/tanmaya-tilavalli-8b79272a7/",
   github: "https://github.com/tanmayast9",
-  // EDIT: Replace hero image path in /public/images/
-  heroImage: "/images/hero-portrait-cutout.png",
 };
 
 export const navLinks = [
@@ -142,16 +140,6 @@ export const skills = {
     "Figma",
   ],
 };
-
-export const beyondTech = [
-  "Basketball",
-  "Chess",
-  "Skating",
-  "Swimming",
-  "Photography",
-  "Drawing",
-  "Singing",
-];
 
 export const contact = {
   heading: "Have an idea in mind? Let's build and learn together.",

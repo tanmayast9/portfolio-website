@@ -67,24 +67,6 @@ body {
   }
 }
 
-/* Marquee animation for Beyond Tech section */
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.marquee-track {
-  animation: marquee 28s linear infinite;
-}
-
-.marquee-track:hover {
-  animation-play-state: paused;
-}
-
 /* Focus styles for accessibility */
 a:focus-visible,
 button:focus-visible {
@@ -96,10 +78,6 @@ button:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
-  }
-
-  .marquee-track {
-    animation: none;
   }
 
   *,
